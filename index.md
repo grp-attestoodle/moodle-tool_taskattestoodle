@@ -12,6 +12,6 @@
 
 ### [Attestoodle et tool_TaskAttestoodle](contrat.md)  
 
-## [Informations pour développeur](developp.md)
+## [Informations pour développeurs](developp.md)
 
 
