@@ -10,5 +10,8 @@
 
 ### [Quand sera lancée la génération automatique ?](quand.md)
 
-### [Attestoodle et tool_TaskAttestoodle](contrat.md)
+### [Attestoodle et tool_TaskAttestoodle](contrat.md)  
+
+## [Informations pour développeur](developp.md)
+
 
