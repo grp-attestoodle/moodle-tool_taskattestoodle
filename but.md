@@ -9,7 +9,7 @@ La planification de la génération des attestations permet de :
  * Pré-renseigner les intervalles sur les écrans 'rapport global' et 'rapport détaillé' selon la date actuelle, l'intervalle le plus
  proche sera utilisé.  
 
- ## Illustration de la détermination de l'intervalle à partir de la planification ##  
+## Illustration de la détermination de l'intervalle à partir de la planification ##  
 
  ![exemple1](https://user-images.githubusercontent.com/26385729/69239470-90c63780-0b9a-11ea-8789-55c0813241ae.png)
  
