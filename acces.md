@@ -7,3 +7,4 @@ Une fois le Plugin installé vous pouvez accéder à la planification à partir 
 
 La nouvelle colonne « Échéance » porte les liens vers la planification.  
 En cliquant sur « à planifier » vous accédez à l'écran [Planification des attestations](planifier.md)  
+En cliquant sur une date d'échéance vous accéder à l'écran de [consultation / modification des intervalles planifiés](modifier.md) 
