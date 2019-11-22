@@ -9,7 +9,7 @@ Seule l'application des règles d'intégrités suivantes est imposée :
  * la date de fin doit être supérieure ou égale à la date du début
  * la date d'échéance doit être supérieur à la date du début de l'intervalle.  
 
-# Les incohérences d'intervalles se chevauchant ou laissant une période non couverte sont laissées à la responsabilité de l'opérateur réalisant la saisie. #
+**Les incohérences d'intervalles se chevauchant ou laissant une période non couverte sont laissées à la responsabilité de l'opérateur réalisant la saisie.**
 
 Les actions possibles sont :
  * Le bouton "Réinitialiser" : Supprimer l'ensemble des intervalles et reviens à l'écran de planification.  
