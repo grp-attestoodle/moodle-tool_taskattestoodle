@@ -38,4 +38,12 @@ Pour chaque tâche :
  * on détermine la prochaine date d'échéance.
  * on marque la tâche comme Faite  
  
- 
+Courriel émit lors d'une génération d'attestations    
+![mail1](https://user-images.githubusercontent.com/26385729/69417020-2c30e700-0d18-11ea-8a76-9e98d09367e0.png)
+Le lien offre un accès direct au rapport global de la formation, filtré sur les dates de l'intervalle utilisé. Ce qui permet de télécharger directement les attestations générées.  
+
+Courriel émit lorsque des attestations sont à réaliser manuellement :
+![mail2](https://user-images.githubusercontent.com/26385729/69417069-41a61100-0d18-11ea-92df-65bb118781b7.png)  
+
+*Un mail sera lancé par tâche exécutée (ayant une adresse mail non vide).*  
+
