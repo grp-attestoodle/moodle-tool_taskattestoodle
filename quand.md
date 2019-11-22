@@ -1,6 +1,6 @@
 [Retour](index.md)
 
-##  Quand sera lancée la génération automatique ?. ##
+##  Quand sera lancée la génération automatique ? ##
 
 Par défaut la tâche de génération d'attestations se lance toutes les demi-heures ( Cf source db\tasks.php), mais cette tâche dépend du cycle des tâches Moodle, et pour des questions de performance, l'administrateur de votre site peut modifier le traitement cyclique de la génération d'attestations en lui fixant d'autres valeurs.  
 
