@@ -18,7 +18,7 @@ Les actions possibles sont :
 L'icône ciseau : Scinder un intervalle si sa durée le permet (un intervalle correspond au minimum à une journée)  
 L’icône crayon : Éditer un intervalle, permet de modifier l'ensemble des informations de l'intervalle via l'écran ci-dessous  
 
-**Remarque** : la date d'échéance fait son affichage en précisant l'heure et le jour de la semaine (en anglais). La génération automatique sera lancée à partir de cette date, mais pas à cette date précise car le traitement est dépendant des tâches Moodle cf [Quand sera lancée la génération automatique ?](quand.md).
+**Remarque** : la date d'échéance fait son affichage en précisant l'heure et le jour de la semaine (en anglais). La génération automatique sera lancée à partir de cette date, mais pas à cette date précise car le traitement est dépendant des tâches Moodle cf [Quand sera lancée la génération automatique ?](quand.md)
 
 ## Modifier un intervalle ##
 
