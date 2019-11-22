@@ -25,7 +25,8 @@ L’icône crayon : Éditer un intervalle, permet de modifier l'ensemble des in
 ![modifiuniq](https://user-images.githubusercontent.com/26385729/69415670-5634da00-0d15-11ea-974b-0b72dcc6c9a1.png)  
 
 Vous pouvez changer les dates en respectant les règles de cohérence (date de début < date de fin et échéance > date de début)  
-*Génération automatique* : si vous voulez ou non que la génération des attestations soit réalisée.  
-*Fait* : si vous souhaitez que cet intervalle soit pris en compte ou non par les traitements automatiques.  
+*Génération automatique* : coché si vous voulez ou non que la génération des attestations soit réalisée.  
+*Fait* : coché si vous souhaitez que cet intervalle soit pris en compte ou non par les traitements automatiques.  
 En décochant Fait sur un intervalle passé, vous demandez de générer à nouveau les attestations pour  cet intervalle.  
 *E mail à notifier* : adresse mail qui recevra le compte rendu ou le rappel de la tâche. Si vous laissez vide ce champ aucun courriel ne sera lancé.  
+
