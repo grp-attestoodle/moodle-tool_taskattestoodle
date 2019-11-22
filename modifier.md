@@ -30,3 +30,12 @@ Vous pouvez changer les dates en respectant les règles de cohérence (date de d
 En décochant Fait sur un intervalle passé, vous demandez de générer à nouveau les attestations pour  cet intervalle.  
 *E mail à notifier* : adresse mail qui recevra le compte rendu ou le rappel de la tâche. Si vous laissez vide ce champ aucun courriel ne sera lancé.  
 
+## Détail du traitement automatique ##  
+On récupère l'ensemble des tâches qui ont une date d'échéance dépassée sans être marqué 'Fait'.  
+Pour chaque tâche :
+ * si la génération automatique est demandée on génère les attestations de la formation.
+ * si l'adresse mail est renseignée on envoie un courriel
+ * on détermine la prochaine date d'échéance.
+ * on marque la tâche comme Faite  
+ 
+ 
