@@ -67,7 +67,6 @@ class training_interval_form extends \moodleform {
      * @return array of error.
      */
     public function validation($data, $files) {
-        global $DB;
         $errors = parent::validation($data, $files);
 
         if (isset($data['cancel'])) {
