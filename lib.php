@@ -26,7 +26,7 @@ defined('MOODLE_INTERNAL') || die;
 use tool_attestoodle\utils\db_accessor;
 
 /**
- * Link to the source that manages the planning.
+ * Link to the source that manages the planning .
  *
  * @param int $trainingid ID of training to plan.
  * @return moodle_url to the url to the source that manages the planning.
