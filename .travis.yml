@@ -1,5 +1,3 @@
-# Source : https://github.com/blackboard-open-source/moodle-plugin-ci/blob/master/.travis.dist.yml
-
 language: php
 
 sudo: true
@@ -7,9 +5,10 @@ sudo: true
 addons:
   firefox: "47.0.1"
   postgresql: "9.4"
-  apt:
-    packages:
-      - chromium-chromedriver
+
+services:
+  - mysql
+  - postgresql
 
 cache:
   directories:
@@ -26,9 +25,6 @@ env:
  matrix:
   - DB=pgsql
   - DB=mysqli
-
-services:
-  - mysql
 
 before_install:
   - phpenv config-rm xdebug.ini
@@ -52,5 +48,4 @@ script:
   - moodle-plugin-ci grunt
   - moodle-plugin-ci phpdoc
   - moodle-plugin-ci phpunit
-  - moodle-plugin-ci behat --profile chrome
-  
+  - moodle-plugin-ci behat  
