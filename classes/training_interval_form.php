@@ -39,7 +39,6 @@ class training_interval_form extends \moodleform {
      * all the elements (inputs, titles, buttons, ...) in the form.
      */
     public function definition() {
-        global $CFG, $DB;
         $mform = $this->_form;
         $options = array('step' => 1);
         $mform->addElement('date_time_selector', 'executiondate', get_string('executiondate', 'tool_taskattestoodle'), $options);
