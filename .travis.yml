@@ -37,6 +37,8 @@ before_install:
   - cd ../..
   - composer create-project -n --no-dev --prefer-dist blackboard-open-source/moodle-plugin-ci ci ^2
   - export PATH="$(cd ci/bin; pwd):$(cd ci/vendor/bin; pwd):$PATH"
+  - make build/moodle-plugin-ci.phar
+  - php build/moodle-plugin-ci.phar list
 
 install:
   - moodle-plugin-ci install
