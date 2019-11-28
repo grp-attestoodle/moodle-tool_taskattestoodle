@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Useful global functions for Save Attestoodle.
+ * Useful global functions for Task Attestoodle.
  *
  * @package    tool_taskattestoodle
  * @copyright  2019 Pole de Ressource Numerique de l'Université du Mans
@@ -26,7 +26,7 @@ defined('MOODLE_INTERNAL') || die;
 use tool_attestoodle\utils\db_accessor;
 
 /**
- * Link to the source that manages the planning .
+ * Link to the source that manages the planning.
  *
  * @param int $trainingid ID of training to plan.
  * @return moodle_url to the url to the source that manages the planning.

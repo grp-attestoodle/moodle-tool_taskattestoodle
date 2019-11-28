@@ -14,6 +14,13 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
+/**
+ * Define schedule task for Task Attestoodle.
+ *
+ * @package    tool_taskattestoodle
+ * @copyright  2019 Pole de Ressource Numerique de l'Université du Mans
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
 namespace tool_taskattestoodle\task;
 
 defined('MOODLE_INTERNAL') || die;
@@ -21,7 +28,12 @@ defined('MOODLE_INTERNAL') || die;
 use tool_attestoodle\factories\trainings_factory;
 use tool_attestoodle\certificate;
 use tool_attestoodle\gabarit\attestation_pdf;
-
+/**
+ * Will generate the planned attestations in table form.
+ *
+ * @copyright  2019 Pole de Ressource Numerique de l'Université du Mans
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
 class generatecertificate extends \core\task\scheduled_task {
     /**
      * Returns the name of this task.
