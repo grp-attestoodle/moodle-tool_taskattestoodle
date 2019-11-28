@@ -1,3 +1,50 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+
+{{!
+    @template tool_taskattestoodle/training
+
+    Information about a training
+
+    Classes required for JS:
+    * None
+
+    Data attibutes required for JS:
+    * None
+
+    Context variables required for this template:
+    * titletraining Introduce the training
+    * trainingname  The name of the training
+    * trainingat    Introduce date start
+    * trainingstart The date formatted when the training start
+    * trainingto    Introduce date end
+    * trainingend   The end date of training
+
+    Example context (json):
+    {
+        "titletraining": "Formation : ",
+        "trainingname": "Master dev Attest",
+        "trainingat": "Du ",
+        "trainingstart": "15/08/2019",
+        "trainingto": " au ",
+        "trainingend": "31/09/2019"
+    }
+}}
+
 <div class="container training">
   <div class="row">
     <h3>
