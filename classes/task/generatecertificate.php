@@ -126,6 +126,16 @@ class generatecertificate extends \core\task\scheduled_task {
         global $DB;
         $trainingid = $training->get_id();
 
+        // Create row in table Launch log.
+        $dataobject = new \stdClass();
+        $dataobject->timegenerated = \time();
+        $dataobject->begindate = $begindate->format('Y-m-d');
+        $dataobject->enddate = $enddate->format('Y-m-d');
+        $dataobject->operatorid = $task->operatorid;
+        $dataobject->comment = 'generate by task';
+        $launchid = $DB->insert_record('tool_attestoodle_launch_log', $dataobject, true);
+        $atleastone = 0;
+
         foreach ($training->get_learners() as $learner) {
             $template = $DB->get_record('tool_attestoodle_user_style',
                                     array('userid' => $learner->get_id(), 'trainingid' => $trainingid));
@@ -135,15 +145,7 @@ class generatecertificate extends \core\task\scheduled_task {
             }
 
             if ($enablecertificate == 1) {
-                // Create row in table Launch log.
-                $dataobject = new \stdClass();
-                $dataobject->timegenerated = \time();
-                $dataobject->begindate = $begindate->format('Y-m-d');
-                $dataobject->enddate = $enddate->format('Y-m-d');
-                $dataobject->operatorid = $task->operatorid;
-                $dataobject->comment = 'generate by task';
-                $launchid = $DB->insert_record('tool_attestoodle_launch_log', $dataobject, true);
-
+                $atleastone ++;
                 $certificate = new certificate($learner, $training, $begindate, $enddate);
                 $status = $certificate->create_file_on_server();
                 $pdfinfo = $certificate->get_pdf_informations();
@@ -186,6 +188,9 @@ class generatecertificate extends \core\task\scheduled_task {
                     $DB->insert_records('tool_attestoodle_value_log', $milestones);
                 }
             }
+        }
+        if ($atleastone == 0) {
+            $DB->delete_records('tool_attestoodle_launch_log', array('id' => $launchid));
         }
     }
 }
