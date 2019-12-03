@@ -59,3 +59,21 @@ Le retour prend la forme d'une structure sdtClass ayant les attributs d_start et
 task_link($trainingid)
  * Fournit un objet de type moodle_url vers la page de gestion de la planification (plan.php).
  
+Les générations automatiques sont commentées 'generate by task' (cf table tool_attestoodle_launch_log)  
+
+
+### Qualité du code 
+
+|  Modules Travis  moodle-plugin-ci | Résultat              |
+|-----------------------------------|-----------------------|
+| phplint                           | 13 files. No syntax error found |
+| phpcpd                            | 0.00% duplicated lines out of 1268 total lines of code. |
+| phpmd  | FOUND 0 ERRORS AND 3 VIOLATIONS |
+| codechecker | (OK) exited with 0.  |
+| validate | (OK) exited with 0.  |
+| savepoints | (OK) exited with 0.  |
+| grunt | (OK) exited with 0. |
+| phpunit | No PHPUnit tests to run, free pass! |
+| behat | No Behat features to run, free pass! |
+
+**Remarque** : le module mustache est retiré, suite à un problème sur la configuration de Travis qui ajoute l'erreur suivante : **WARNING: Problem calling HTML validator** 
