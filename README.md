@@ -1,17 +1,3 @@
-# under development #
-Please wait for a release ...   
-.  
-.        
-.            
-.                
-.                    
-.                         
-.                         
-.                         
-.                         
-.                         
-.  
-
 # moodle-tool_taskattestoodle #
 Planning of Attestoodle certificates
 
