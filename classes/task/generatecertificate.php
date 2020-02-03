@@ -49,6 +49,7 @@ class generatecertificate extends \core\task\scheduled_task {
     public function execute() {
         global $CFG, $DB;
         require_once($CFG->dirroot . '/admin/tool/taskattestoodle/lib.php');
+        require_once($CFG->dirroot . '/admin/tool/attestoodle/lib.php');
         // Select task todo.
         $now = new \DateTime();
         $secnow = $now->getTimestamp();
@@ -124,6 +125,7 @@ class generatecertificate extends \core\task\scheduled_task {
                 message_send($eventdata);
             }
         }
+        return true;
     }
 
     /**
