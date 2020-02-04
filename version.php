@@ -32,4 +32,3 @@ $plugin->maturity  = MATURITY_STABLE;
 $plugin->dependencies = [
     'tool_attestoodle' => 2019111301,
 ];
-
