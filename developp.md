@@ -67,7 +67,7 @@ Les générations automatiques sont commentées 'generate by task' (cf table too
 |  Modules Travis  moodle-plugin-ci | Résultat              |
 |-----------------------------------|-----------------------|
 | phplint                           | 13 files. No syntax error found |
-| phpcpd                            | 0.00% duplicated lines out of 1268 total lines of code. |
+| phpcpd                            | 0.00% duplicated lines out of 1269 total lines of code. |
 | phpmd  | FOUND 0 ERRORS AND 3 VIOLATIONS |
 | codechecker | (OK) exited with 0.  |
 | validate | (OK) exited with 0.  |
