@@ -73,7 +73,10 @@ if ($fromform = $mform->get_data()) {
     $dataobject->auto = $fromform->auto;
     $dataobject->mailto = $fromform->email;
     $dataobject->operatorid = $USER->id;
-    $dataobject->togenerate = 1 - $fromform->togenerate;
+    $dataobject->togenerate = 1;
+    if (isset($fromform->togenerate)) {
+        $dataobject->togenerate = 0;
+    }
     $DB->update_record('tool_taskattestoodle', $dataobject);
 
     trainings_factory::get_instance()->create_training_by_category(1, $record->trainingid);
