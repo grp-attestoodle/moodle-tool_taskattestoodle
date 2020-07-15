@@ -1,3 +1,5 @@
+# Source : https://github.com/blackboard-open-source/moodle-plugin-ci/blob/master/.travis.dist.yml
+
 language: php
 
 sudo: true
@@ -5,10 +7,9 @@ sudo: true
 addons:
   firefox: "47.0.1"
   postgresql: "9.4"
-
-services:
-  - mysql
-  - postgresql
+  apt:
+    packages:
+      - openjdk-8-jre-headless
 
 cache:
   directories:
@@ -25,11 +26,14 @@ env:
  matrix:
   - DB=pgsql
   - DB=mysqli
+  
+services:
+  - mysql
 
 before_install:
   - phpenv config-rm xdebug.ini
-  - nvm install 8.9
-  - nvm use 8.9
+  - nvm install 14.0.0
+  - nvm use 14.0.0
   - cd ../..
   - composer create-project -n --no-dev --prefer-dist blackboard-open-source/moodle-plugin-ci ci ^2
   - export PATH="$(cd ci/bin; pwd):$(cd ci/vendor/bin; pwd):$PATH"
@@ -44,7 +48,7 @@ script:
   - moodle-plugin-ci codechecker
   - moodle-plugin-ci validate
   - moodle-plugin-ci savepoints
+  - moodle-plugin-ci mustache
   - moodle-plugin-ci grunt
-  - moodle-plugin-ci phpdoc
   - moodle-plugin-ci phpunit
-  - moodle-plugin-ci behat  
+  - moodle-plugin-ci behat
