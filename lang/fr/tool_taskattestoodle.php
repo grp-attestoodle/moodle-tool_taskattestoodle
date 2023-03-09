@@ -58,3 +58,4 @@ $string['lig1msgtask'] = '<p>Génération des attestations pour la formation : '
 $string['lig2msgtask'] = '<p>Penser à réaliser les attestations  pour la formation : ';
 $string['lnkmsgtask'] = 'lien';
 $string['privacy:metadata'] = 'L\'outil de planification des tâches d\'Attestoodle n\'enregistre aucune donnée personnelle.';
+$string['messageprovider:generatecertificate'] = 'Génération des attestations';

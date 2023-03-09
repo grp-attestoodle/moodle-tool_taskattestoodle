@@ -58,3 +58,4 @@ $string['lig1msgtask'] = '<p>Generation of certificates for training : ';
 $string['lig2msgtask'] = '<p>Think of carrying out the certificates for the training : ';
 $string['lnkmsgtask'] = 'link';
 $string['privacy:metadata'] = 'Attestoodle\'s task scheduling tool does not record any personal data.';
+$string['messageprovider:generatecertificate'] = 'Certificate generation';
