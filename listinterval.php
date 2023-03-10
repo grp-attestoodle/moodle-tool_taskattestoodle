@@ -34,7 +34,7 @@ define('DEFAULT_PAGE_SIZE', 10);
 $trainingid = required_param('trainingid', PARAM_INT);
 $delete = optional_param('delete', 0, PARAM_INT);
 $cut = optional_param('cut', 0, PARAM_INT);
-$page    = optional_param('page', 0, PARAM_INT);
+$page = optional_param('page', 0, PARAM_INT);
 $perpage = optional_param('perpage', DEFAULT_PAGE_SIZE, PARAM_INT);
 
 require_login();

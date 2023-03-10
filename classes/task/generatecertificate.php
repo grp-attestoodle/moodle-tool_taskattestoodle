@@ -23,8 +23,6 @@
  */
 namespace tool_taskattestoodle\task;
 
-defined('MOODLE_INTERNAL') || die;
-
 use tool_attestoodle\factories\trainings_factory;
 use tool_attestoodle\certificate;
 use tool_attestoodle\gabarit\attestation_pdf;
@@ -120,8 +118,8 @@ class generatecertificate extends \core\task\scheduled_task {
                 $eventdata->subject = '[Task ATTESTOODLE]';
                 $eventdata->fullmessage = html_to_text($message);
                 $eventdata->fullmessageformat = FORMAT_HTML;
-                $eventdata->fullmessagehtml   = $message;
-                $eventdata->smallmessage      = '';
+                $eventdata->fullmessagehtml = $message;
+                $eventdata->smallmessage = '';
                 message_send($eventdata);
             }
         }

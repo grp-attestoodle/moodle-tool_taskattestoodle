@@ -24,8 +24,6 @@
 
 namespace tool_taskattestoodle\privacy;
 
-defined('MOODLE_INTERNAL') || die();
-
 /**
  * The tool_taskattestoodle plugin does not store any data.
  *

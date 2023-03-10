@@ -25,10 +25,10 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'tool_taskattestoodle';
-$plugin->release   = '0.1.3';
-$plugin->version   = 2020071502;
-$plugin->requires  = 2012112900;
-$plugin->maturity  = MATURITY_STABLE;
+$plugin->release = '0.1.4';
+$plugin->version = 2023021000;
+$plugin->requires = 2012112900;
+$plugin->maturity = MATURITY_STABLE;
 $plugin->dependencies = [
     'tool_attestoodle' => 2019111301,
 ];
