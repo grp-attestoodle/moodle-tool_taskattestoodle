@@ -31,7 +31,8 @@ use tool_attestoodle\utils\db_accessor;
  * @param int $trainingid ID of training to plan.
  * @return moodle_url to the url to the source that manages the planning.
  */
-function task_link($trainingid) {
+function task_link($trainingid)
+{
     $url = new moodle_url('/admin/tool/taskattestoodle/plan.php', ['trainingid' => $trainingid]);
     return $url;
 }
@@ -41,7 +42,8 @@ function task_link($trainingid) {
  *
  * @param int $trainingid ID of deleted training.
  */
-function tool_taskattestoodle_deletetraining($trainingid) {
+function tool_taskattestoodle_deletetraining($trainingid)
+{
     global $DB;
     $DB->delete_records('tool_taskattestoodle', array('trainingid' => $trainingid));
     return "";
@@ -51,7 +53,8 @@ function tool_taskattestoodle_deletetraining($trainingid) {
  *
  * @param int $trainingid ID of the training.
  */
-function tool_taskattestoodle_get_interval($trainingid) {
+function tool_taskattestoodle_get_interval($trainingid)
+{
     global $DB;
     $ret = new \stdClass();
     $ret->d_start = 0;
@@ -63,8 +66,8 @@ function tool_taskattestoodle_get_interval($trainingid) {
 
     $now = new \DateTime();
     $secnow = $now->getTimestamp();
-    $tot = count($rs);
-    if ($tot == 0) {
+    //$tot = count($rs); // Causes error in PHP 8
+    if (empty($rs)) {
         return $ret;
     }
 
@@ -86,12 +89,15 @@ function tool_taskattestoodle_get_interval($trainingid) {
  *
  * @param Training $training where we compute the new deadline.
  */
-function newdeadline($training) {
+function newdeadline($training)
+{
     global $DB;
     $now = new \DateTime();
     $secnow = $now->getTimestamp();
-    $rs = $DB->get_recordset_sql('select * from {tool_taskattestoodle} where trainingid = ? order by executiondate',
-                                array($training->get_id()));
+    $rs = $DB->get_recordset_sql(
+        'select * from {tool_taskattestoodle} where trainingid = ? order by executiondate',
+        array($training->get_id())
+    );
     $nextlaunch = 0;
     foreach ($rs as $result) {
         if ($secnow < $result->executiondate && $nextlaunch == 0) {
