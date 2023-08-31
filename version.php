@@ -26,7 +26,7 @@ defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'tool_taskattestoodle';
 $plugin->release = '0.1.5';
-$plugin->version = 2023083100;
+$plugin->version = 2023083101;
 $plugin->requires = 2012112900;
 $plugin->maturity = MATURITY_STABLE;
 $plugin->dependencies = [

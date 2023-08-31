@@ -66,7 +66,7 @@ function tool_taskattestoodle_get_interval($trainingid)
 
     $now = new \DateTime();
     $secnow = $now->getTimestamp();
-    //$tot = count($rs); // Causes error in PHP 8
+
     if (empty($rs)) {
         return $ret;
     }
