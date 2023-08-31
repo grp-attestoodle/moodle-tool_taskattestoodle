@@ -63,8 +63,8 @@ function tool_taskattestoodle_get_interval($trainingid) {
 
     $now = new \DateTime();
     $secnow = $now->getTimestamp();
-    $tot = count($rs);
-    if ($tot == 0) {
+
+    if (empty($rs)) {
         return $ret;
     }
 
@@ -90,8 +90,10 @@ function newdeadline($training) {
     global $DB;
     $now = new \DateTime();
     $secnow = $now->getTimestamp();
-    $rs = $DB->get_recordset_sql('select * from {tool_taskattestoodle} where trainingid = ? order by executiondate',
-                                array($training->get_id()));
+    $rs = $DB->get_recordset_sql(
+        'select * from {tool_taskattestoodle} where trainingid = ? order by executiondate',
+        array($training->get_id())
+    );
     $nextlaunch = 0;
     foreach ($rs as $result) {
         if ($secnow < $result->executiondate && $nextlaunch == 0) {
